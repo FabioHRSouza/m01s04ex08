@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Bolsa de Valores</title>
+  <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+<section class="container-principal">
+  <div class="box-form">
+    <h1>Negociações</h1>
+    <p>Resgitre as ações vendidas</p>
+    <form class="formulario">
+      <label for="data-transacao">Data:</label>
+      <input id="data-transacao" type="date" required>
+      <br>
+      <label for="quantidade-vendida">Qtdade de ações:</label>
+      <input id="quantidade-vendida" type="number" min="1" max="100" required>
+      <br>
+      <label for="valor-negociacao">Valor unitário:</label>
+      <input id="valor-negociacao" type="number" min="0" max="1000000.0" required>
+      <br>
+      <button id="registrar-negociacao" type="submit">Salvar</button>
+      <div class="box-filter">
+        <button id="filtrar">Filtrar</button>
+        <input id="valorFiltro" type="number" placeholder="Total Acima de: R$"></div>
+    </form>
+
+  </div>
+  <div class="box-baixo">
+    <div class="container-tabela">
+      <h2>Histórico de Negociações</h2>
+      <table>
+        <thead>
+        <th>Data</th>
+        <th>Quantidade</th>
+        <th>Valor únitario</th>
+        <th>Valor total</th>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<script type="module" src="app/js/main/programa.js"></script>
+</body>
+</html>
